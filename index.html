@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Excusas</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="./4geeks.ico" />
+    <head>
+
+      <script>
+
+        const Howlist =['The dog','My grandma','His turtle','My bird','My Brother'];
+        const actionlist =['took ','threw ','stole ','gift'];
+        const whatlist =['my Homework','The keys','my shoes','the phone','my pencil'];
+        const Whenlist =['today','in the morning','when I finished','during my lunch','right on time'];
+
+        function GetRandomNumber(array){
+    return Math.floor(Math.random()* array.length)}
+
+    function Getform (){
+    return Howlist [GetRandomNumber(Howlist)]
+  }
+
+  function Getverb (){
+    return actionlist [GetRandomNumber(actionlist)]
+  }
+
+  function Getsubjet (){
+    return whatlist [GetRandomNumber(whatlist)]
+  }
+
+  function Getwhen (){
+    return Whenlist [GetRandomNumber(Whenlist)]
+  }
+
+
+        function ExcuseGenerator(){
+          const form = Getform ();
+          const verb = Getverb () ;
+          const subjet = Getsubjet ();
+          const when = Getwhen ();
+  
+  
+  alert(form + ' ' +  verb + ' ' +  subjet +' ' + when);
+}
+         
+
+</script>
+
+
+    </head>
+
+    <body>
+
+      <h1>OMG!! My Dog Eat My HomeWork</h1>
+      
+    <button onclick="ExcuseGenerator()">
+    Click Me
+    </button>
+
+  </body>
+
+</html>
